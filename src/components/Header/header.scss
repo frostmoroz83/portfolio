@@ -12,6 +12,7 @@
 		transform: translateY(6px);
 	}
 }
+
 @keyframes mouse-scroll {
 	0% {
 		opacity: 0;
@@ -36,32 +37,63 @@ header {
 	background-position: center;
 	background-size: cover;
 	color: #fff;
+	
 	.header__inner {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: center;
 		align-items: center;
 		position: relative;
 		
 		.navigation {
-			
-			ul {
+			position: absolute;
+			font-size: 22px;
+			top: 51px;
+			font-weight: bold;
+			letter-spacing: 2.2px;
+			text-transform: uppercase;
+			left: 0;
+			right: 0;
+			&__list {
 				display: flex;
+				justify-content: space-around;
+				position: absolute;
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				text-align: center;
+				z-index: 1;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background-color: rgba(11, 81, 136, 0.95);
+				
 				li {
 					
+					margin-right: 100px;
 					list-style-type: none;
+					&:last-child {
+						margin-right: 0;
+					}
 					
 					a {
 						color: #fff;
 						text-decoration: none;
 					}
+					
 				}
+				
 			}
+			
 			
 		}
 		
 		.header__centered-content {
-			
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: center;
 			.user-photo {
 				overflow: hidden;
 				height: 110px;
@@ -104,6 +136,7 @@ header {
 				transform: none;
 				border: 2px solid white;
 				top: 170px;
+				
 				.wheel {
 					display: block;
 					margin: 5px auto;
@@ -116,6 +149,7 @@ header {
 					animation: mouse-wheel 0.6s linear infinite;
 				}
 			}
+			
 			.m_scroll_arrows {
 				display: block;
 				transform: rotate(45deg);
@@ -126,16 +160,28 @@ header {
 				height: 16px;
 				
 			}
-			.unu {
-				margin-top: 1px;
-				animation: mouse-scroll 1s infinite;
-			}
-			.doi {
-				animation: mouse-scroll 1s infinite;
-				margin-top: -6px;
-			}
+			
+			.unu,
+			.doi,
 			.trei {
 				animation: mouse-scroll 1s infinite;
+			}
+			
+			.unu {
+				margin-top: 1px;
+				animation-delay: .1s;
+				animation-direction: alternate;
+			}
+			
+			.doi {
+				animation-delay: .2s;
+				animation-direction: alternate;
+				margin-top: -6px;
+			}
+			
+			.trei {
+				animation-delay: .3s;
+				animation-direction: alternate;
 				margin-top: -6px;
 			}
 		}

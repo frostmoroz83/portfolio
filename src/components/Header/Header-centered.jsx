@@ -8,7 +8,7 @@ const HeaderCentered = () => {
 				<img src={photo} alt=""/>
 			</div>
 
-			<h1 className="header__title">Александрh</h1>
+			<h1 className="header__title">Александр</h1>
 			<h2 className="header__subtitle">HTML</h2>
 
 		</div>

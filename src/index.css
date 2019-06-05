@@ -4,26 +4,32 @@
 	Noto Sans, 400, 400 italic, 700, 700 italic
 */
 @font-face {
-  font-family: 'Noto Sans';
-  src: url("./font/NotoSans-Bold.ttf");
-  font-weight: bold;
-  font-style: normal;
+	font-family: 'Noto Sans';
+	src: url("./font/NotoSans-Bold.ttf");
+	font-weight: bold;
+	font-style: normal;
 }
+
 @font-face {
-  font-family: 'Noto Sans';
-  src: url("./font/NotoSans-Regular.ttf");
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Noto Sans';
+	src: url("./font/NotoSans-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-size: 1.6rem;
-  font-family: "Noto Sans", sans-serif;
+	margin: 0;
+	font-size: 1.6rem;
+	font-family: "Noto Sans", sans-serif;
 
 }
+
 html, body {
-  height: 100%;
-  min-width: 320px;
+	height: 100%;
+	min-width: 320px;
 }
 

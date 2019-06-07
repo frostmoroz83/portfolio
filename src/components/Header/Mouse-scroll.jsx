@@ -2,7 +2,7 @@ import React from 'react';
 
 const MouseScroll = () => {
 	return (
-		<a href="/" className="mouse_scroll">
+		<a href="#footer" className="mouse_scroll">
 			<div className="mouse">
 				<div className="wheel">
 

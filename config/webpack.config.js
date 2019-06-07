@@ -394,6 +394,16 @@ module.exports = function(webpackEnv) {
 							loaders: [
 								require.resolve('style-loader'),
 								require.resolve('css-loader'),
+                {
+                  loader: 'postcss-loader', // Run post css actions
+                  options: {
+                    plugins: function () { // post css plugins, can be exported to postcss.config.js
+                      return [
+                        require('autoprefixer')
+                      ];
+                    }
+                  }
+                },
 								require.resolve('sass-loader')
 							]
             },

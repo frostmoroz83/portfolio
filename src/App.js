@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Resume from "./components/Resume/Resume";
+import Copyright from "./components/Copyright/Copyright";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header/>
       <Resume/>
       <Footer/>
+      <Copyright/>
     </div>
   );
 }

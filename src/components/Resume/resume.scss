@@ -1,0 +1,56 @@
+.resume {
+	border-bottom: 1px solid #e9eff3;
+	padding: 50px 0;
+	.user-photo {
+		overflow: hidden;
+		width: 110px;
+		margin-right: auto;
+		margin-left: auto;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.user-photo--big {
+		max-width: 100%;
+		height: auto;
+		border: 5px solid #d2e6f7;
+		border-radius: 110px;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+	
+	.heading {
+		color: #0052c2;
+		font-weight: 700;
+	}
+	.heading--medium {
+		font-size: 24px;
+		line-height: 28px;
+		margin: 16px 0 15px;
+		
+	}
+	.definition-list {
+		margin: 0 0 43px;
+		padding: 0;
+		list-style-type: none;
+		&__item {
+			margin: 0 0 13px;
+			padding: 0;
+			
+		}
+		&__def {
+			font-size: 14px;
+			line-height: 26px;
+			font-weight: 700;
+			color: #0052c2;
+			text-transform: uppercase;
+		}
+		&__desc {
+			font-size: 16px;
+		}
+		
+	}
+}
+

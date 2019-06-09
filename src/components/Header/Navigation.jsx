@@ -3,7 +3,7 @@ import ToggleMenu from "./Toggle-menu";
 
 const MenuComponent =({status, handleOpen}) => (
 	<ul className={status ? "navigation__list open" : "navigation__list false"}>
-		<li><a href="#footer" onClick={()=>status? handleOpen(false):''}>Резюме</a></li>
+		<li><a href="#resume" onClick={()=>status? handleOpen(false):''}>Резюме</a></li>
 		<li><a href="#footer" onClick={()=>status? handleOpen(false):''}>Портфолио</a></li>
 		<li><a href="#footer" onClick={()=>status? handleOpen(false):''}>Контакты</a></li>
 	</ul>

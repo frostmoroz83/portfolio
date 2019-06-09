@@ -36,11 +36,16 @@ header {
 	height: 800px;
 	//height: 390px;
 	background-color: #086494;
-	background-image: url(../../img/bg-nature.png);
+	background-image: url(../../img/bg-pc.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	color: #fff;
+	
+	@media (max-width: 768px) {
+	background-image: url(../../img/bg-mini.jpg);
+		height: 600px;
+	}
 	
 	.header__inner {
 		display: flex;

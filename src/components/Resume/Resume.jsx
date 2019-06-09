@@ -16,10 +16,10 @@ const Resume = () => {
                     </div>
                     <div className="col-9">
                         <div className="heading">
-                            Резюмэ
+                            Резюме
                         </div>
                         <p>
-                            <strong>Александр</strong></p>
+                            <strong>Александр Морозов</strong></p>
                         <p> Здравствуйте! Я начинающий фронтенд-разработчик. Также у
                             меня есть опыт работы тестировщиком, в том числе удаленно.
                         </p>
@@ -48,7 +48,7 @@ const Resume = () => {
                                     </li>
                                     <li className="definition-list__item">
                                         <div className="definition-list__def">
-                                            Москва, 2017
+                                            Ульяновск, 2017
                                         </div>
                                         <div className="definition-list__desc">
                                             <p>

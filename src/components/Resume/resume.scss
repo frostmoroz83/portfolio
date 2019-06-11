@@ -1,6 +1,9 @@
 .resume {
 	border-bottom: 1px solid #e9eff3;
 	padding: 50px 0;
+	a:active, a:focus {
+		outline: none !important;
+	}
 	.user-photo {
 		overflow: hidden;
 		width: 110px;

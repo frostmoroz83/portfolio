@@ -1,27 +1,27 @@
 import React, {Component} from 'react';
-import {ButtonGroup, Button} from "reactstrap";
+import {ButtonGroup, Button, Nav, NavLink} from "reactstrap";
 
 class Filter extends Component  {
 	render() {
 		const {filterBy, searchItems} = this.props;
 		return (
-			<ButtonGroup>
-				<Button
+			<Nav className="nav-pills flex-column flex-sm-row justify-content-center">
+				<NavLink className="flex-sm-fill text-center nav-link"
 					active={filterBy === 'all'}
 					onClick={searchItems.bind( this,'all')}>
 					Все
-				</Button>
-				<Button
+				</NavLink>
+				<NavLink className="flex-sm-fill text-center nav-link"
 					active={filterBy === 'react'}
 					onClick={searchItems.bind(this, 'react')}>
 					React
-				</Button>
-				<Button
+				</NavLink>
+				<NavLink className="flex-sm-fill text-center nav-link"
 					active={filterBy === 'css'}
 					onClick={searchItems.bind(this, 'css')}>
 					CSS
-				</Button>
-			</ButtonGroup>
+				</NavLink>
+			</Nav>
 		);
 	}
 }

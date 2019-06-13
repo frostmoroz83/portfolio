@@ -7,15 +7,17 @@ class ItemCard extends Component {
 		const {title, image, author, } = this.props;
 		return (
 			<Col md="4" >
-				<CardImg top width="100%" src={image}/>
-				<CardBody>
-					<CardTitle>
-						{title}
-					</CardTitle>
-					<CardText>
-						{author}
-					</CardText>
-				</CardBody>
+				<div className="portfolio-item">
+					<CardImg top width="100%" src={image}/>
+					<CardBody>
+						<CardTitle>
+							{title}
+						</CardTitle>
+						<CardText>
+							{author}
+						</CardText>
+					</CardBody>
+				</div>
 			</Col>
 		);
 	}

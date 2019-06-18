@@ -1,15 +1,18 @@
 import React, {Component} from 'react';
 import {Col, Row,} from "reactstrap";
-import {Button, Form, FormGroup, Label, Input, FormText} from "reactstrap";
+import { Form, FormGroup,  Input, } from "reactstrap";
 
 class ContactsForm extends Component {
+	onSubmit = (e) => {
+		e.preventDefault();
+	}
 	render() {
 		return (
 			<Col md="6">
 				<div className="heading heading--medium heading--padding-top heading--white">
 					Связаться со мной
 				</div>
-				<Form id="contact-form">
+				<Form id="contact-form" action="/testmail.php" method="post">
 					<input type="hidden" name="project_name" value="Portfolio website"/>
 					<input type="hidden" name="form_from" value="133@proect.ru"/>
 					<input type="hidden" name="admin_email" value="123@inbox.ru"/>
@@ -36,7 +39,7 @@ class ContactsForm extends Component {
 					<FormGroup>
 						<Input type="textarea" name="textarea" id="textarea" placeholder="Ваше сообщение"/>
 					</FormGroup>
-					<Input type="submit" />
+					<Input type="submit" value="Отправить" onClick={this.props.onSubmit}/>
 
 				</Form>
 

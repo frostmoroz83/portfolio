@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import './contacts.scss';
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row,  } from "reactstrap";
 import ContactInfo from "./ContactInfo";
 import ContactsForm from "./ContactsForm";
 

@@ -5,7 +5,7 @@ const MenuComponent =({status, handleOpen}) => (
 	<ul className={status ? "navigation__list open" : "navigation__list false"}>
 		<li><a href="#resume" onClick={()=>status? handleOpen(false):''}>Резюме</a></li>
 		<li><a href="#portfolio" onClick={()=>status? handleOpen(false):''}>Портфолио</a></li>
-		<li><a href="#copyright" onClick={()=>status? handleOpen(false):''}>Контакты</a></li>
+		<li><a href="#contacts" onClick={()=>status? handleOpen(false):''}>Контакты</a></li>
 	</ul>
 );
 
@@ -15,8 +15,6 @@ class Navigation extends Component {
 	};
 
 	handleOpen = (status) => {
-		console.log(status);
-		// return (status) ? this.setState({active: true}) : (!status) ? this.setState({active: false}) : '';
 		if (status){
 			this.setState({active: true})
 		} else if (!status) {
@@ -26,7 +24,6 @@ class Navigation extends Component {
 
 	render() {
 		const  status  = this.state.active;
-		console.log(status);
 		return (
 
 			<nav className="navigation">

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {ButtonGroup, Button, Nav, NavLink} from "reactstrap";
+import { Nav, NavLink } from "reactstrap";
 
 class Filter extends Component  {
 	render() {

@@ -4,7 +4,6 @@ import './portfolio.scss'
 import {Container, Row,} from "reactstrap";
 import Filter from "./Filter";
 import ItemCard from "./ItemCard";
-import * as PropTypes from "prop-types";
 
 const myWork = {
 	items: [

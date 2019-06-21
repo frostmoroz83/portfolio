@@ -1,25 +1,52 @@
 import React, {Component} from 'react';
 import {Col, Row,} from "reactstrap";
-import { Form, FormGroup,  Input, } from "reactstrap";
+import {Form, FormGroup, Input,} from "reactstrap";
+import axios from 'axios';
 
 class ContactsForm extends Component {
-	onSubmit = (e) => {
-		e.preventDefault();
+	state = {
+		name: []
 	}
+	handleChange = event => {
+		this.setState({name: event.target.value});
+	}
+
+	cancelCourse = () => {
+		document.getElementById("contact-form").reset();
+		document.getElementById("messege").innerHTML = 'новое значение';
+
+	}
+
+	handleSubmit = event => {
+		event.preventDefault();
+		this.cancelCourse();
+
+
+
+		const user = {
+			name: this.state.name
+		};
+		const options = {
+			method: 'POST',
+			headers: {'content-type': 'application/json'},
+			data: user,
+			url: 'testmail.php',
+		};
+		axios(options)
+			.then(res => {
+				console.log(res.data);
+			})
+	}
+
 	render() {
 		return (
 			<Col md="6">
-				<div className="heading heading--medium heading--padding-top heading--white">
+				<div id="messege" className="heading heading--medium heading--padding-top heading--white">
 					Связаться со мной
 				</div>
-				<Form id="contact-form" action="/testmail.php" method="post">
-					<input type="hidden" name="project_name" value="Portfolio website"/>
-					<input type="hidden" name="form_from" value="133@proect.ru"/>
-					<input type="hidden" name="admin_email" value="123@inbox.ru"/>
-					<input type="hidden" name="form_subject" value="Message from website"/>
-
+				<Form id="contact-form" onSubmit={this.handleSubmit}>
 					<FormGroup>
-						<Input type="text" name="name" id="name" placeholder="Имя"/>
+						<Input type="text" name="name" id="name" onChange={this.handleChange} placeholder="Имя"/>
 					</FormGroup>
 					<FormGroup>
 						<Input type="email" name="email" id="email" placeholder="Email"/>
@@ -39,7 +66,7 @@ class ContactsForm extends Component {
 					<FormGroup>
 						<Input type="textarea" name="textarea" id="textarea" placeholder="Ваше сообщение"/>
 					</FormGroup>
-					<Input type="submit" value="Отправить" onClick={this.props.onSubmit}/>
+					<Input type="submit" value="Отправить"/>
 
 				</Form>
 

@@ -16,6 +16,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.cbalink {
+	display: none;
+}
 
 body {
 	margin: 0;

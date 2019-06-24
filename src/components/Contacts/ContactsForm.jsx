@@ -5,15 +5,26 @@ import axios from 'axios';
 
 class ContactsForm extends Component {
 	state = {
-		name: []
+		name: [],
+		email: [],
+		skype: [],
+		tel: [],
+		mess: []
 	}
 	handleChange = event => {
-		this.setState({name: event.target.value});
+		for (var key in this.state) {
+			if(key === event.target.id){
+				this.setState({[key]: event.target.value});
+			}
+		}
 	}
 
 	cancelCourse = () => {
-		document.getElementById("contact-form").reset();
-		document.getElementById("messege").innerHTML = 'новое значение';
+		let form = document.getElementById("contact-form");
+		let mes = document.getElementById("messege");
+		form.reset();
+		form.style.display = "none";
+		mes.innerText = `Спасибо ${this.state.name} за ваше сообщение!`;
 
 	}
 
@@ -21,10 +32,12 @@ class ContactsForm extends Component {
 		event.preventDefault();
 		this.cancelCourse();
 
-
-
 		const user = {
-			name: this.state.name
+			name: this.state.name,
+			email: this.state.email,
+			skype: this.state.skype,
+			tel: this.state.tel,
+			mess: this.state.mess,
 		};
 		const options = {
 			method: 'POST',
@@ -34,8 +47,10 @@ class ContactsForm extends Component {
 		};
 		axios(options)
 			.then(res => {
+
 				console.log(res.data);
 			})
+
 	}
 
 	render() {
@@ -49,22 +64,22 @@ class ContactsForm extends Component {
 						<Input type="text" name="name" id="name" onChange={this.handleChange} placeholder="Имя"/>
 					</FormGroup>
 					<FormGroup>
-						<Input type="email" name="email" id="email" placeholder="Email"/>
+						<Input type="email" name="email" id="email" onChange={this.handleChange} placeholder="Email"/>
 					</FormGroup>
 					<Row form>
 						<Col>
 							<FormGroup>
-								<Input type="text" name="skype" id="skype" placeholder="Skype"/>
+								<Input type="text" name="skype" id="skype" onChange={this.handleChange} placeholder="Skype"/>
 							</FormGroup>
 						</Col>
 						<Col>
 							<FormGroup>
-								<Input type="text" name="tel" id="tel" placeholder="Телефон"/>
+								<Input type="text" name="tel" id="tel" onChange={this.handleChange} placeholder="Телефон"/>
 							</FormGroup>
 						</Col>
 					</Row>
 					<FormGroup>
-						<Input type="textarea" name="textarea" id="textarea" placeholder="Ваше сообщение"/>
+						<Input type="textarea" name="mess" id="mess" onChange={this.handleChange} placeholder="Ваше сообщение"/>
 					</FormGroup>
 					<Input type="submit" value="Отправить"/>
 

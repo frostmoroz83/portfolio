@@ -5,34 +5,36 @@ import {Container, Row,} from "reactstrap";
 import Filter from "./Filter";
 import ItemCard from "./ItemCard";
 
+
+
 const myWork = {
 	items: [
 		{
 			"id": 0,
-			"title": "Финист – ясный сокол",
-			"author": "Андрей Рубанов",
+			"title": "Личный сайт портфолио",
+			"author": "Верстка личного сайта портфолио, на котором вы сейчас находитесь.",
 			"image":
-				"http://proect.ru/usercontent/img/project_organica.jpg",
-			"price": 710,
-			"rating": 'react'
+				"/project_portfolio.jpg",
+			"rating": 'react',
+			"src": "http://portfolio-mv.zzz.com.ua/"
 		},
 		{
 			"id": 1,
-			"title": "1984",
-			"author": "Джордж Оруэлл",
+			"title": "Погодное приложение",
+			"author": "Можно узнать погоду у вас в городе.",
 			"image":
-				"http://proect.ru/usercontent/img/project_organica.jpg",
-			"price": 415,
-			"rating": 'css'
+				"/weater.jpg",
+			"rating": 'react',
+			"src": "http://weather.a-mv.zzz.com.ua/"
 		},
 		{
-			"id": 5,
-			"title": "Девушка в тумане",
-			"author": "Донато Карризи",
+			"id": 2,
+			"title": "Магазин книг",
+			"author": "Учебный проект, с возможностью заказа и сортировки книг.",
 			"image":
 				"http://proect.ru/usercontent/img/project_organica.jpg",
-			"price": 464,
-			"rating": 'css'
+			"rating": 'react',
+			"src": "https://react-book-c154f.web.app/"
 		},
 	],
 

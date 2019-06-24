@@ -22,7 +22,7 @@ const ContactInfo = () => {
 							</div>
 							<div className="definition-list__desc">
 								<p><a href="mailto:irina@proect.ru">
-									moroz@proect.ru
+									admin@portfolio-mv.zzz.com.ua
 								</a>
 								</p>
 							</div>
@@ -33,7 +33,7 @@ const ContactInfo = () => {
 							</div>
 							<div className="definition-list__desc">
 								<p><a href="skype:irina.proekt?chat">
-									moroz.proekt
+									skype
 								</a>
 								</p>
 							</div>
@@ -49,7 +49,7 @@ const ContactInfo = () => {
 							</div>
 							<div className="definition-list__desc">
 								<p><a href="tel:+7-927-838-91-58">
-									+7-927-838-91-58</a>
+									+7-960-372-82-17</a>
 								</p>
 							</div>
 						</li>
